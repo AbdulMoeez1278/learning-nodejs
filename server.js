@@ -12,10 +12,10 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, "127.0.0.1", () => {
-  console.log("Listening on 127.0.0.1:3000"); // server is listening at 3000 PORT
+  console.log("Listening on 127.0.0.1:3000"); // server is listening at 127.0.0.1:3000 PORT
 }); // createServer takes functions as a parameter
 
-// Simple function - if we create a function then pass it as a parameter in node
+// Simple function --- if we create a function then pass it as a parameter in node
 // function dataControl(req, res) {
 //   res.write("<h1>Abdul Moeez</h1>");
 //   res.end();
