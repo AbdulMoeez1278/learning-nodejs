@@ -1,17 +1,48 @@
 // Basic server
 const http = require("http"); // http module handles the req and response data
 const fs = require("fs");
+const path = require("path");
+
+const PORT = 3000;
+const hostname = "127.0.0.1";
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  const data = fs.readFileSync("data.txt", "utf8");
-  res.end(data);
+  let filePath = req.url === "/" ? "/index.html" : req.url;
+  let ext = path.extname(filePath);
+  let contentType = "text/html";
 
-  //   res.write("<h1>Hello World!</h1>");
-  //   res.write("<b>Abdul Moeez</b>");
+  switch (ext) {
+    case ".css":
+      contentType = "text/css";
+      break;
+    case ".js":
+      contentType = "text/javascript";
+      break;
+    // You can add more cases for images etc.
+  }
+
+  const fullPath = "." + filePath;
+  fs.readFile(fullPath, "utf8", (err, data) => {
+    if (err) {
+      res.writeHead(404);
+      res.end("404 - File Not Found");
+    } else {
+      res.writeHead(200, { "Content-Type": contentType });
+      res.end(data);
+    }
+  });
 });
 
-server.listen(3000, "127.0.0.1", () => {
+// const server = http.createServer((req, res) => {
+//   res.writeHead(200, { "Content-Type": "text/html" });
+//   const data = fs.readFileSync("index.html", "utf8");
+//   res.end(data);
+
+//   //   res.write("<h1>Hello World!</h1>");
+//   //   res.write("<b>Abdul Moeez</b>");
+// });
+
+server.listen(PORT, hostname, () => {
   console.log("Listening on 127.0.0.1:3000"); // server is listening at 127.0.0.1:3000 PORT
 }); // createServer takes functions as a parameter
 
