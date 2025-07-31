@@ -12,7 +12,7 @@ let c = 30;
 // interview question
 // console.log in js and node are same or not - No, they are not same
 // js console mechanism provided by a web browser
-// nodes console.log module provides a simple debugging console
+// nodes console.log module provides a simple debugging console - node internally aik module bna k rakhta hai
 
 // conditionals
 if (a === 20) {
@@ -49,8 +49,8 @@ const arr = [1, 2, 3, 4, 5, 3];
 // interview question
 // filter use in nodejs
 // let result = arr.filter((item) => {
-//   //   return item >= 4;
-//   //   return item === 3;
+//   //   return item >= 4; // return those values which is greater or equals to 4
+//   //   return item === 3; // gives the value that equals to 3
 //   //   console.log(item);
 // });
 
@@ -78,7 +78,7 @@ let person = {
 // console.log(person.address.city); // city
 // console.log(person.contact.email); // email
 
-// Global Objects in nodejs 
+// Global Objects in nodejs
 console.log("Directory:", __dirname); // directory path
 console.log("File:", __filename); // file name
 console.log("Platform:", process.platform); // platform that are used

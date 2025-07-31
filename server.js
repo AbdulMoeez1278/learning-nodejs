@@ -1,5 +1,5 @@
 // Basic server
-const http = require("http"); // http module handles the req and response data
+const http = require("http"); // in nodejs, http module handles the req and response of servers in nodejs
 const fs = require("fs");
 const path = require("path");
 
@@ -33,6 +33,16 @@ const server = http.createServer((req, res) => {
   });
 });
 
+server.listen(PORT, hostname, () => {
+  console.log("Listening on 127.0.0.1:3000"); // server is listening at 127.0.0.1:3000 PORT
+}); // createServer takes functions as a parameter
+
+// creating a server that is listening on server 3000 - Basic nodejs server
+// http.createServer((req, res) => {
+// res.write("NodeJS Learning");
+// res.end();
+// }).listen(3000);
+
 // const server = http.createServer((req, res) => {
 //   res.writeHead(200, { "Content-Type": "text/html" });
 //   const data = fs.readFileSync("index.html", "utf8");
@@ -42,10 +52,7 @@ const server = http.createServer((req, res) => {
 //   //   res.write("<b>Abdul Moeez</b>");
 // });
 
-server.listen(PORT, hostname, () => {
-  console.log("Listening on 127.0.0.1:3000"); // server is listening at 127.0.0.1:3000 PORT
-}); // createServer takes functions as a parameter
-
+// Function as a parameter
 // Simple function --- if we create a function then pass it as a parameter in node
 // function dataControl(req, res) {
 //   res.write("<h1>Abdul Moeez</h1>");
