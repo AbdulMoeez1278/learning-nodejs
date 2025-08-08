@@ -3,13 +3,13 @@ const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  console.log("Data send by browser =>) ", req.query.name); // if we have this query or request from client : 127.0.0.1:3000?name=moeez
+  // console.log("Data send by browser =>) ", req.query.name); // if we have this query or request from client : 127.0.0.1:3000?name=moeez
 
   // we can also send that query or request from the server
-  res.send("Welcome " + req.query.name);
+  // res.send("Welcome " + req.query.name);
 
   //   console.log("Hello World");
-  //   res.send("<h1>Home page</h1>");
+  res.send("<h1>Home page</h1>");
 });
 
 app.get("/about", (req, res) => {
@@ -22,6 +22,11 @@ app.get("/blog", (req, res) => {
   res.send("<h1>Blog page</h1>");
 });
 
+app.get("/contact", (req, res) => {
+  console.log("Contact Page");
+  res.send("<h1>Contact Page</h1>");
+});
+
 app.listen(port, () => {
-  console.log(`Server is listening on this port ${port}`);
+  console.log(`Server is listening on this port: 127.0.0.1:${port}`);
 });
