@@ -28,32 +28,40 @@ app.get("/profile", (req, res) => {
     name: "Moeez",
     email: "moeez@gmail.com",
     city: "Lahore",
+    // iterating using loop
+    skills: ["php", "js", "python", "node", "java"],
   };
   res.render("profile", { user }); // passed it as an object
+  console.log("Profile Page");
+});
+
+app.get("/login", (req, res) => {
+  res.render("Login");
 });
 
 // about page
 app.get("/about", (req, res) => {
-  res.sendFile(`${publicPath}/about.html`);// remove the extension from the URL + shows the static content
+  res.sendFile(`${publicPath}/about.html`); // remove the extension from the URL + shows the static content
   console.log("About Page");
 });
 
 // blog page
 app.get("/blog", (req, res) => {
-  res.sendFile(`${publicPath}/blog.html`);// remove the extension from the URL + shows the static content
+  res.sendFile(`${publicPath}/blog.html`); // remove the extension from the URL + shows the static content
   console.log("Blog Page");
 });
 
 // contact page
 app.get("/contact", (req, res) => {
-  res.sendFile(`${publicPath}/contact.html`);// remove the extension from the URL + shows the static content
+  res.sendFile(`${publicPath}/contact.html`); // remove the extension from the URL + shows the static content
   console.log("Contact Page");
 });
 
 // 404 page
 // Express v5+ — valid wildcard - first method to use the *splat
+// the term "splat" refers to the use of a wildcard character (*) in a route path to capture any sequence of characters that follow a certain point in the URL.
 app.get("/*splat", (req, res) => {
-  res.sendFile(`${publicPath}/404.html`);// remove the extension from the URL + shows the static content
+  res.sendFile(`${publicPath}/404.html`); // remove the extension from the URL + shows the static content
   console.log("Page Not Found!");
 });
 

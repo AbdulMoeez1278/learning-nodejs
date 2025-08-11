@@ -4,29 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Login Page</title>
 </head>
 
 <body>
+
     <!-- if we use = sign then it prints the html tags as well  -->
     <!-- <%= include("common/header"); %> -->
 
     <!-- using - instead of equal we have to tell that what we are tryng to run or load the content -->
     <%- include("common/header"); %>
-
-        <h1>Welcome <%= user.name %>
-        </h1>
-        <h3>Email: <%= user.email %>
-        </h3>
-        <h3>City: <%= user.city %>
-        </h3>
-        <ul>
-            <% user.skills.forEach((item)=> {%>
-                <li>
-                    <%= item %>
-                </li>
-                <% }) %>
-        </ul>
+        <h1>Login Page</h1>
 </body>
 
 </html>
