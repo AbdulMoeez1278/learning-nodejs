@@ -27,6 +27,7 @@
     "colors": "^1.4.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "mongodb": "^6.18.0",
     "nodemon": "^3.1.10",
     "simple-node-logger": "^21.8.12"
   }

@@ -35,19 +35,28 @@ router.use(reqFilter);
 
 // the application level middleware applies to the entire express application - so the routes that are written below, the middleware applied to all of them
 app.get("/", (req, res) => {
-  res.send("Home Page ");
+  res.send("<h1>Home Page</h1>");
+  console.log("Home Page");
 });
 
 app.get("/users", (req, res) => {
-  res.send("Users Page");
+  res.send("<h1>Users Page</h1>");
+  console.log("Users Page");
 });
 
 app.get("/about", (req, res) => {
-  res.send("About Page");
+  res.send("<h1>About Page</h1>");
+  console.log("About Page");
 });
 
 router.get("/contact", (req, res) => {
-  res.send("Contact Page");
+  res.send("<h1>Contact Page</h1>");
+  console.log("Contact Page");
+});
+
+router.get("/blogs", (req, res) => {
+  res.send("<h1>Blog Page</h1>");
+  console.log("Blog Page");
 });
 
 app.use("/", router); // router instance
