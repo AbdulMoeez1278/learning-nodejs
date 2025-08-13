@@ -35,5 +35,26 @@ async function getData() {
 // calling the function
 // getData();
 
+// handle the promises that returns the data from the database
+// using promises
+// getData().then((res) => {
+//   res
+//     .find()
+//     .toArray()
+//     .then((data) => {
+//       console.log(data);
+//     });
+// });
+
+// using async function
+// const main = async () => {
+//   let data = await getData();
+//   data = await data.find().toArray();
+//   console.log(data);
+//   // return data;
+// };
+
+// main();
+
 // export file and import it mainServer.js file
 module.exports = getData;

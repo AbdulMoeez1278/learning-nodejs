@@ -1,0 +1,23 @@
+// import the mongodb file
+const dbConnect = require("./mongodb");
+
+// handle the promises that returns the data from the database
+// using promises
+// dbConnect().then((res) => {
+//   res
+//     .find()
+//     .toArray()
+//     .then((data) => {
+//       console.log(data);
+//     });
+// });
+
+// using async function
+const main = async () => {
+  let data = await dbConnect();
+  data = await data.find().toArray();
+  console.log(data);
+  // return data;
+};
+
+main();
