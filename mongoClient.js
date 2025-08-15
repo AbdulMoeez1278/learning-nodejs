@@ -1,6 +1,8 @@
 // import the mongodb file
 const dbConnect = require("./mongodb");
 
+// read data from mongodb
+
 // handle the promises that returns the data from the database
 // using promises
 // dbConnect().then((res) => {
