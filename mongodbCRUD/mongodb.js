@@ -9,11 +9,20 @@ const client = new MongoClient(url);
 // specifying database name
 const database = "e-com";
 
-async function dbConnect() {
+// // first method to create a function - simple function
+// async function dbConnect() {
+//   let result = await client.connect();
+//   let db = result.db(database);
+
+//   return db.collection("products");
+// }
+
+// second method to create a function - arrow function
+const dbConnect = async () => {
   let result = await client.connect();
   let db = result.db(database);
 
   return db.collection("products");
-}
+};
 
 module.exports = dbConnect;
