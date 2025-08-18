@@ -22,7 +22,9 @@ const dbConnect = async () => {
   let result = await client.connect();
   let db = result.db(database);
 
+  // specifying collection inside database
   return db.collection("products");
 };
 
+// export the file
 module.exports = dbConnect;
