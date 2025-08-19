@@ -1,4 +1,4 @@
-// GET API
+// RESTful API
 const express = require("express");
 const dbConnect = require("../mongodbCRUD/mongodb"); // import mongodb.config file || mongodb.js file
 const mongodb = require("mongodb"); // use mongodb module
