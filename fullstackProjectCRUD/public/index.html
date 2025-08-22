@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>ToDo List</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Enter new todo" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html> -->
+
+
+<!-- 2nd revision -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List App</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-1hc6skcdARtxbO2OG2YVUjHgScmZwU58GQdfkR0FLqWyRdp8mBks9v1I5D5nHwM3+uOe7JYAzsUU6PWi4PdRWg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📝 ToDo List</h1>
+
+        <form id="todo-form" autocomplete="off">
+            <input type="text" id="todo-input" placeholder="Enter a new task..." required>
+            <button type="submit" title="Add task">
+                <i class="fas fa-plus"></i> Add
+            </button>
+        </form>
+
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html> -->
+
+
+
+<!-- 3rd revision -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern ToDo App</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 ToDo List</h1>
+            <button id="dark-mode-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <form id="todo-form" autocomplete="off">
+            <input type="text" id="todo-input" placeholder="Enter a new task..." required />
+            <button type="submit" title="Add Task">
+                <i class="fas fa-plus"></i>
+            </button>
+        </form>
+
+        <ul id="todo-list"></ul>
+        <p id="status-message"></p>
+
+        <button id="clear-completed" title="Clear completed todos">
+            <i class="fas fa-trash"></i> Clear Completed
+        </button>
+
+        <!-- Ask to delete or not -->
+        <div id="confirm-box" class="hidden">
+            <p id="confirm-text">Are you sure?</p>
+            <button id="confirm-yes">Yes</button>
+            <button id="confirm-no">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
