@@ -6,6 +6,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.json({
+    title: "Get API route for a sample API",
     message: "A sample API",
   });
 });
